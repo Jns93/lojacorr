@@ -1,5 +1,5 @@
 # Use a imagem oficial do PHP como base
-FROM php:8.1-fpm
+FROM php:8.3-fpm
 
 # Instalar dependências do sistema
 RUN apt-get update && apt-get install -y \
@@ -13,7 +13,10 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip \
     git \
-    curl
+    curl \
+    libonig-dev \
+    libzip-dev \
+    libxml2-dev
 
 # Limpar cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*

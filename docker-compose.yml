@@ -33,10 +33,10 @@ services:
     container_name: mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: lojacorr
-      MYSQL_USER: root
-      MYSQL_PASSWORD:
+          MYSQL_ROOT_PASSWORD: lojacorr
+          MYSQL_DATABASE: lojacorr
+          MYSQL_USER: lojacorr
+          MYSQL_PASSWORD: lojacorr
     ports:
       - "3306:3306"
     volumes:
