@@ -17,8 +17,9 @@ Este projeto oferece um ambiente de desenvolvimento isolado e reproduzível para
 
 1. **Crie o arquivo .env:**
 Para uso com docker use a seguinte parametrização:
-# Configurações do banco de dados
 ```
+Configurações do banco de dados
+
 DB_CONNECTION=mysql
 DB_HOST=db
 DB_PORT=3306
