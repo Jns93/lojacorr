@@ -16,15 +16,14 @@ Este projeto oferece um ambiente de desenvolvimento isolado e reproduzível para
 ## Configuração
 
 1. **Crie o arquivo env:**
-   Para uso com docker use a seguinte parametrização:
-    DB_CONNECTION=mysql
-    DB_HOST=db
-    DB_PORT=3306
-    DB_DATABASE=lojacorr
-    DB_USERNAME=lojacorr
-    DB_PASSWORD=lojacorr
- Ou
- cp .env.example .env
+Para uso com docker use a seguinte parametrização:
+# Configurações do banco de dados
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=lojacorr
+DB_USERNAME=lojacorr
+DB_PASSWORD=lojacorr
 
 2. **Inicie os contêineres:**
 docker-compose up --build
