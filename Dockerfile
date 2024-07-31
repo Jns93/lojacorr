@@ -41,8 +41,7 @@ RUN composer install
 COPY ./docker/php/php.ini /usr/local/etc/php/
 
 # Ajustar permissões
-RUN chown -R www-data:www-data /var/www \
-    && chmod -R 755 /var/www/storage
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Expor a porta
 EXPOSE 9000

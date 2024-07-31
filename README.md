@@ -15,7 +15,7 @@ Este projeto oferece um ambiente de desenvolvimento isolado e reproduzível para
 
 ## Configuração
 
-1. **Crie o arquivo env:**
+1. **Crie o arquivo .env:**
 Para uso com docker use a seguinte parametrização:
 # Configurações do banco de dados
 DB_CONNECTION=mysql
@@ -48,7 +48,18 @@ Senha: lojacorr
 Aplicação Laravel: http://localhost:8000
 
 7. **Autenticação:**
-Usuário padrão do Laravel:
+Usuário admin:
 Email: admin@lojacorr.com
 Senha: admin
-O usuário padrão pode ser criado com o seeder fornecido. Certifique-se de que o seeder foi executado.
+(O usuário padrão pode ser criado com o seeder fornecido. Certifique-se de que o seeder foi executado.)
+
+**A aplicação trabalha com bearer auth**
+
+Obtenha o token de autenticação através da URL:
+POST http://localhost:8000/api/login
+
+Body:
+{
+    "email": "admin@lojacorr.com",
+    "password": "admin"
+}.
