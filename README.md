@@ -26,10 +26,10 @@ DB_USERNAME=lojacorr
 DB_PASSWORD=lojacorr
 
 2. **Inicie os contêineres:**
-docker-compose up --build
+docker compose up --build
 
 3. **Acesse o contêiner do Laravel**
-docker-compose exec app bash
+docker compose exec app bash
 
 4. **Dentro do contêiner, instale as dependencias, gere a chave de aplicação e execute as migrações e seeders:**
 composer install
