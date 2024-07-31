@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install -y \
     curl \
     libonig-dev \
     libzip-dev \
-    libxml2-dev
+    libxml2-dev \
+    net-tools
 
 # Limpar cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -48,4 +49,3 @@ EXPOSE 9000
 
 # Comando para iniciar o PHP-FPM
 CMD ["php-fpm"]
-

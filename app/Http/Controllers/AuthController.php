@@ -18,10 +18,12 @@ class AuthController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        if (! $user || ! Hash::check($request->password, $user->password)) {
-            throw ValidationException::withMessages([
-                'email' => ['Credenciais inválidas'],
-            ]);
+        if (! $user) {
+            return response()->json(['message' => 'Usuário não encontrado'], 404);
+        }
+
+        if (! Hash::check($request->password, $user->password)) {
+            return response()->json(['message' => 'Senha inválida'], 401);
         }
 
         $token = $user->createToken('API Token')->plainTextToken;
